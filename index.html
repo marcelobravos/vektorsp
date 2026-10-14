@@ -616,6 +616,11 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--celeste);outline-of
 @media(max-width:860px){.nos-top{grid-template-columns:1fr}.nos-iso{width:120px;margin-top:24px}}
 .people{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,2vw,28px)}
 @media(max-width:860px){.people{grid-template-columns:1fr}}
+.people.solo{grid-template-columns:1fr}
+.person.solo{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(24px,5vw,72px);align-items:start}
+.person.solo .p-degree{border-bottom:0;padding-bottom:0;margin-bottom:0}
+.person.solo .tl{gap:24px}
+@media(max-width:860px){.person.solo{grid-template-columns:1fr}.person.solo .p-degree{border-bottom:1px solid var(--linea);padding-bottom:22px}}
 .person{background:var(--hueso);border-radius:32px;padding:clamp(26px,3.2vw,40px)}
 .p-top{display:flex;align-items:center;gap:18px;margin-bottom:22px}
 .avatar{flex:none;width:68px;height:68px;display:grid;place-items:center;border-radius:50% 50% 50% 16px;background:var(--marino);color:var(--celeste);font:italic 500 24px/1 var(--tit)}
@@ -632,6 +637,10 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--celeste);outline-of
 /* contacto */
 .fichas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,2vw,28px)}
 @media(max-width:860px){.fichas{grid-template-columns:1fr}}
+.fichas.solo{grid-template-columns:1fr}
+.ficha.solo{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:20px clamp(24px,5vw,72px);align-items:end}
+.ficha.solo .f-role{margin-bottom:0}
+@media(max-width:760px){.ficha.solo{grid-template-columns:1fr}}
 .ficha{background:var(--papel);border-radius:32px;padding:clamp(26px,3.2vw,40px)}
 .f-brand{display:flex;align-items:center;gap:10px;margin-bottom:28px;font-size:13px;font-weight:500;color:var(--tx-3)}
 .f-brand .iso{width:28px;height:28px}
@@ -785,23 +794,17 @@ footer{position:relative;background:var(--marino-2);color:var(--osc-2);padding:c
 <div class="wrap">
 <div class="nos-top">
 <div class="rv"><p class="kick">Nosotros</p><h2>La historia</h2><svg class="iso iso-claro nos-iso" viewBox="0 0 120 120" aria-hidden="true"><use href="#iso"></use></svg></div>
-<p class="story rv">Nos formamos como <b>ingenieros civiles eléctricos en la Universidad de Santiago de Chile</b>, con mención en sistemas de energía, y llevamos <b>6 años trabajando juntos</b> en sistemas de potencia. Partimos en consultoría, elaborando estudios para proyectos de generación y PMGD a lo largo del país, y luego pasamos al mundo de la transmisión como <b>especialistas en conexión de proyectos a la red y protecciones</b>, revisando y confeccionando los estudios que exige la NTSyCS y analizando las fallas reales del sistema. Vektor nace de esa experiencia: haber estado a ambos lados de la mesa, como quienes elaboran los estudios y como quienes los revisan y aprueban.</p>
+<p class="story rv">Vektor nace de la trayectoria de su fundador, <b>ingeniero civil en electricidad de la Universidad de Santiago de Chile</b>, con mención en sistemas de energía, y de <b>más de 6 años de trabajo</b> en sistemas de potencia. Esa experiencia partió en consultoría, elaborando estudios para proyectos de generación y PMGD a lo largo del país, y continuó en el mundo de la transmisión como <b>especialista en conexión de proyectos a la red y protecciones</b>, revisando y confeccionando los estudios que exige la NTSyCS y analizando las fallas reales del sistema. De ahí viene la mirada de Vektor: haber estado a ambos lados de la mesa, como quien elabora los estudios y como quien los revisa y aprueba.</p>
 </div>
-<div class="people">
-<article class="person rv">
-<div class="p-top"><div class="avatar">JC</div><div><h3>Joaquín Cerna Díaz</h3><div class="role">Socio fundador · Gerente de Estudios</div></div></div>
-<p class="p-degree"><b>Ingeniero Civil en Electricidad</b>, mención Sistemas de Energía Eléctrica, Universidad de Santiago de Chile. 6 años en el desarrollo de estudios de protecciones, flujo de potencia y capacidad de barra, y en modelación de relés multimarca.</p>
-<div class="tl">
-<div class="tl-item"><span class="yr">2024–hoy</span><div><b>Sector transmisión</b><span>Desarrollo de estudios de protecciones, flujo de potencia y capacidad de barra para la conexión de proyectos a la red, además de la revisión de estudios NTSyCS en PGP y acceso abierto, informes de falla de quinto día y mejoras a esquemas EDAC.</span></div></div>
-<div class="tl-item"><span class="yr">2020–2024</span><div><b>Consultoría de estudios</b><span>Estudios de acceso abierto a gran escala, modelación de funciones de protección de transmisión, auditorías técnicas NTSyCS y estudios PMGD hasta la puesta en servicio.</span></div></div>
+<div class="people solo">
+<article class="person solo rv">
+<div>
+<div class="p-top"><div class="avatar">JC</div><div><h3>Joaquín Cerna Díaz</h3><div class="role">Socio fundador · Ingeniería y estudios</div></div></div>
+<p class="p-degree"><b>Ingeniero Civil en Electricidad</b>, mención Sistemas de Energía Eléctrica, Universidad de Santiago de Chile. Más de 6 años en estudios sistémicos y de protecciones para la conexión y operación en el SEN: flujo de potencia, capacidad de barra, estabilidad transitoria y modelación de relés multimarca.</p>
 </div>
-</article>
-<article class="person rv">
-<div class="p-top"><div class="avatar">MB</div><div><h3>Marcelo Bravo Sepúlveda</h3><div class="role">Socio fundador · Gerente de Estudios</div></div></div>
-<p class="p-degree"><b>Ingeniero Civil Eléctrico</b>, mención Sistemas de Energía (Potencia), Universidad de Santiago de Chile. 7 años en estudios sistémicos y de protecciones para la conexión y operación en el SEN.</p>
 <div class="tl">
-<div class="tl-item"><span class="yr">2024–hoy</span><div><b>Sector transmisión</b><span>Más de 70 estudios NTSyCS desarrollados, revisados y validados (ECAP, EFP, ECC, EDT, ECB), análisis de fallas con Synchrowave, y trabajo en normativas de filosofía de protecciones y bases técnicas de licitación.</span></div></div>
-<div class="tl-item"><span class="yr">2020–2024</span><div><b>Consultoría de estudios</b><span>Más de 50 estudios eléctricos para proyectos PMGD hasta el ICC, estudios de arco eléctrico (NFPA 70E / IEEE 1584) y de estabilidad transitoria para obras de ampliación en transmisión.</span></div></div>
+<div class="tl-item"><span class="yr">2024–hoy</span><div><b>Sector transmisión</b><span>Más de 70 estudios NTSyCS desarrollados, revisados y validados (ECAP, EFP, ECC, EDT, ECB) para la conexión de proyectos a la red, incluidos estudios de protecciones, flujo de potencia y capacidad de barra. Revisión de estudios en PGP y acceso abierto, informes de falla de quinto día y análisis de fallas con Synchrowave, mejoras a esquemas EDAC y trabajo en normativas de filosofía de protecciones y bases técnicas de licitación.</span></div></div>
+<div class="tl-item"><span class="yr">2020–2024</span><div><b>Consultoría de estudios</b><span>Más de 50 estudios eléctricos para proyectos PMGD hasta el ICC y la puesta en servicio, estudios de acceso abierto a gran escala, modelación de funciones de protección de transmisión y auditorías técnicas NTSyCS. Estudios de arco eléctrico (NFPA 70E / IEEE 1584) y de estabilidad transitoria para obras de ampliación en transmisión.</span></div></div>
 </div>
 </article>
 </div>
@@ -814,31 +817,23 @@ footer{position:relative;background:var(--marino-2);color:var(--osc-2);padding:c
 <div><p class="kick">Contacto · Hablemos</p><h2>Tu proyecto necesita respaldo técnico. <em>Aquí está.</em></h2></div>
 <p class="s-sub">Escríbenos con los antecedentes de tu instalación o proyecto y te respondemos con un alcance claro, plazos y una propuesta formal.</p>
 </header>
-<div class="fichas">
-<article class="ficha rv">
+<div class="fichas solo">
+<article class="ficha solo rv">
+<div>
 <div class="f-brand"><svg class="iso iso-claro" viewBox="0 0 120 120" aria-hidden="true"><use href="#iso"></use></svg>Vektor · Sistemas de Potencia</div>
 <h3 class="f-name">Joaquín Cerna D.</h3>
-<div class="f-role">Gerente de Estudios</div>
+<div class="f-role">Ingeniería y estudios</div>
+</div>
 <div class="f-rows">
 <div class="f-row"><span class="lb">Tel</span><a href="tel:+56976639104">+56 9 7663 9104</a></div>
 <div class="f-row"><span class="lb">Mail</span><a href="mailto:joaquincernad@vektorsp.cl">joaquincernad@vektorsp.cl</a></div>
 <div class="f-row"><span class="lb">Emp</span><span>Vektor Sistemas de Potencia SpA</span></div>
 </div>
 </article>
-<article class="ficha rv">
-<div class="f-brand"><svg class="iso iso-claro" viewBox="0 0 120 120" aria-hidden="true"><use href="#iso"></use></svg>Vektor · Sistemas de Potencia</div>
-<h3 class="f-name">Marcelo Bravo S.</h3>
-<div class="f-role">Gerente de Estudios</div>
-<div class="f-rows">
-<div class="f-row"><span class="lb">Tel</span><a href="tel:+56962878368">+56 9 6287 8368</a></div>
-<div class="f-row"><span class="lb">Mail</span><a href="mailto:marcelobravos@vektorsp.cl">marcelobravos@vektorsp.cl</a></div>
-<div class="f-row"><span class="lb">Emp</span><span>Vektor Sistemas de Potencia SpA</span></div>
-</div>
-</article>
 </div>
 <div class="cta rv">
 <svg class="agua" viewBox="0 0 120 120" aria-hidden="true"><use href="#iso"></use></svg>
-<div><p>Cuéntanos qué necesitas: coordinación de protecciones, conexión de un proyecto al SEN o el análisis de una falla, y te devolvemos una propuesta con alcance, supuestos y plazos.</p><a class="btn btn-claro" href="mailto:joaquincernad@vektorsp.cl?subject=Solicitud%20de%20estudio%20el%C3%A9ctrico&amp;cc=marcelobravos@vektorsp.cl">Escribir a Vektor <span class="ar">→</span></a></div>
+<div><p>Cuéntanos qué necesitas: coordinación de protecciones, conexión de un proyecto al SEN o el análisis de una falla, y te devolvemos una propuesta con alcance, supuestos y plazos.</p><a class="btn btn-claro" href="mailto:joaquincernad@vektorsp.cl?subject=Solicitud%20de%20estudio%20el%C3%A9ctrico">Escribir a Vektor <span class="ar">→</span></a></div>
 </div>
 </div>
 </section>
